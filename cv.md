@@ -92,4 +92,9 @@
         </body>
     </html>
    ```
-* **
+* **English language level and practice**
+    * Pre-Intermediate
+        * Grammar - Intermediate 
+        * Understanding of spoken language - Intermediate
+        * Spoken language - Elementary
+    * Practice: watching movies in original without subtitles
