@@ -33,6 +33,7 @@ body * + *{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  justify-content: space-between;
   width: 60vw;
   min-width: 700px;
   min-height: 1000px;
@@ -62,25 +63,23 @@ header > h1 {
 .contact > h3 {
   margin: 0;
 }
-/*header styles end*/
+
+
 
 /*main styles start*/
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
- 
-  
+    
 }
 section.education {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  
 }
 section.soft-skills {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  
 }
 section.hard-skills {
   grid-column: 1 / 2;
@@ -90,4 +89,22 @@ section.english {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
-/*main styles end*/
+img.main-photo {
+  position: absolute;
+  
+  border-radius: 50%;
+}
+
+
+img.example-photo {
+  height: 200px;
+}
+
+footer {
+  
+  background-color: var(--brand-green);
+  
+}
+img.logo {
+  height: 100px;
+}
