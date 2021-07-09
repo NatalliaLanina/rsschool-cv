@@ -1,0 +1,93 @@
+:root{
+	--black: #000000;
+	--dark-gray: #363636;
+	--gray: #a3a3a3;
+	--light-gray: #ebebeb;
+	--white: #ffffff;
+	--brand-green: #b0d4cc;
+	--dark-red: #910000;
+		
+	font-size: calc(1em + .1vw);
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+}
+
+body {
+	font-family: Trebuchet MS, Tahoma, Arial, sans-serif;
+	color: var(--dark-gray);
+	margin: 0;
+	line-height: 1.4;
+	background-color: var(--dark-gray);
+}
+
+body * + *{
+	margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 60vw;
+  min-width: 700px;
+  min-height: 1000px;
+  margin: 2rem auto;
+  background-color: white;
+}
+
+/*header styles start*/
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--brand-green);
+}
+
+header > h1 {
+  font-size: 3em;
+  padding: 0 10px;
+  margin: 20px;
+}
+
+.contact {
+  align-self: flex-end;  
+  padding-left: 10px;
+  font-size: .8rem;
+}
+
+.contact > h3 {
+  margin: 0;
+}
+/*header styles end*/
+
+/*main styles start*/
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+ 
+  
+}
+section.education {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  
+}
+section.soft-skills {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  
+}
+section.hard-skills {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+section.english {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+/*main styles end*/
