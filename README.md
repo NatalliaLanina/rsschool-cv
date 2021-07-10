@@ -1,1 +1,1 @@
-https://NatalliaLanina.github.io/rsschool-cv/cv
+https://NatalliaLanina.github.io/rsschool-cv/
