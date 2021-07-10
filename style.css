@@ -1,11 +1,11 @@
 :root{
-	--black: #000000;
+	--black: #000;
 	--dark-gray: #363636;
 	--gray: #a3a3a3;
 	--light-gray: #ebebeb;
-	--white: #ffffff;
-	--brand-green: #b0d4cc;
-	--dark-red: #910000;
+	--white: #fff;
+	--light-pink: #ffe0ec;
+	--dark-blue: #032e73;
 		
 	font-size: calc(1em + .1vw);
 	box-sizing: border-box;
@@ -18,13 +18,12 @@
 }
 
 body {
-	font-family: Trebuchet MS, Tahoma, Arial, sans-serif;
+	font-family: 'Courier New', Courier, monospace;
 	color: var(--dark-gray);
 	margin: 0;
 	line-height: 1.4;
-	background-color: var(--dark-gray);
+	background-image: radial-gradient(circle, white, #032e73);
 }
-
 body * + *{
 	margin: 0;
 }
@@ -36,7 +35,7 @@ body * + *{
   justify-content: space-between;
   width: 60vw;
   min-width: 700px;
-  min-height: 1000px;
+  min-height: 1200px;
   margin: 2rem auto;
   background-color: white;
 }
@@ -45,33 +44,41 @@ body * + *{
 header {
   display: flex;
   flex-direction: row;
-  background-color: var(--brand-green);
+  color: white;
+  background-color: var(--dark-blue);
+  height: 170px;
 }
-
 header > h1 {
-  font-size: 3em;
-  padding: 0 10px;
-  margin: 20px;
+  font-size: 2.8em;
+  padding-left: 1.1em;
+  padding-top: 30px;
+  margin: 9px;
+  line-height: 1;
+  letter-spacing: 2px;
 }
-
 .contact {
-  align-self: flex-end;  
-  padding-left: 10px;
+  align-self: center;  
+  padding: 20px;
+  margin-left: auto;
   font-size: .8rem;
 }
-
 .contact > h3 {
   margin: 0;
 }
-
-
 
 /*main styles start*/
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-    
+  grid-gap: 1em;
+}
+main > * {
+  background-color: var(--light-pink);
+  padding: 15px;
+}
+main > section {
+  padding: 3.4em;
 }
 section.education {
   grid-column: 1 / 2;
@@ -91,20 +98,27 @@ section.english {
 }
 img.main-photo {
   position: absolute;
-  
-  border-radius: 50%;
-}
-
-
-img.example-photo {
+  top: 70px;
+  left: 43.5%;
   height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1em white;
 }
 
+/*footer style start*/
 footer {
-  
-  background-color: var(--brand-green);
-  
+  display: flex;
+  height: 170px;
+  background-color: var(--dark-blue);
 }
 img.logo {
   height: 100px;
+  align-self: center;
+}
+footer > a {
+  align-self: flex-end;
+  margin-left: auto;
+  padding-bottom: 20px;
+  color: var(--light-pink);
+  font-size: 2em;
 }
