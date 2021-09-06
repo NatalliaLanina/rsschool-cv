@@ -7,7 +7,7 @@
 	--light-pink: #ffe0ec;
 	--dark-blue: #032e73;
 		
-	font-size: calc(1em + .1vw);
+	font-size: calc(16px + .1vw);
 	box-sizing: border-box;
 }
 
@@ -34,9 +34,10 @@ body * + *{
   flex-grow: 1;
   justify-content: space-between;
   width: 60vw;
+  max-width: 1100px;
   min-width: 700px;
   min-height: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
   background-color: white;
 }
 
@@ -49,16 +50,16 @@ header {
   height: 170px;
 }
 header > h1 {
-  font-size: 2.8em;
-  padding-left: 1.1em;
-  padding-top: 30px;
+  font-size: 2.8rem;
+  padding-left: 3rem;
+  padding-top: 1.5rem;
   margin: 9px;
   line-height: 1;
   letter-spacing: 2px;
 }
 .contact {
   align-self: center;  
-  padding: 20px;
+  padding: 1.5rem;
   margin-left: auto;
   font-size: .8rem;
 }
@@ -78,13 +79,15 @@ main > * {
   padding: 15px;
 }
 main > section {
-  padding: 3.4em;
+  padding: 3.4rem;
 }
 section.education {
+  padding-top: 7rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
 section.soft-skills {
+  padding-top: 7rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
@@ -96,10 +99,28 @@ section.english {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
+.code-example ul {
+ display: inline;
+ list-style: none;
+ margin-block-start: 0px;
+ padding-inline-start: 0px;
+}
+.code-example li {
+  display: inline;
+}
+.code-example h3 {
+  color: black;
+}
+.code-example img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+}
+
 img.main-photo {
   position: absolute;
-  top: 70px;
-  left: 43.5%;
+  top: 7rem;
+  left: calc(50% - 100px);
   height: 200px;
   border-radius: 50%;
   box-shadow: 0 0 0 1em white;
@@ -108,17 +129,41 @@ img.main-photo {
 /*footer style start*/
 footer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
   height: 170px;
   background-color: var(--dark-blue);
 }
 img.logo {
-  height: 100px;
+  height: 90px;
   align-self: center;
 }
 footer > a {
+  text-decoration: none;
   align-self: flex-end;
-  margin-left: auto;
-  padding-bottom: 20px;
   color: var(--light-pink);
   font-size: 2em;
+  line-height: 1;
+}
+.github-container {
+  align-self: flex-end;
+  font-size: 1.3rem;
+  color: white;
+ }
+.github {
+  text-decoration: none;
+  color: white;
+  padding-left: 40px;
+  background-image: url(https://image.flaticon.com/icons/png/512/536/536452.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left; 
+}
+
+@media(max-width: 700px) {
+  img.main-photo {
+    display: none;
+  }
 }
