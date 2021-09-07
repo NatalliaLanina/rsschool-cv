@@ -50,11 +50,11 @@ header {
 }
 header > h1 {
   font-size: 2.8rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
   padding-top: 1.5rem;
   margin: 9px;
   line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 .contact {
   align-self: center;  
@@ -79,15 +79,15 @@ main > * {
   padding: 15px;
 }
 main > section {
-  padding: 3.4rem;
+  padding: 2rem;
 }
 section.education {
-  padding-top: 7rem;
+  padding-top: 8rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
 section.soft-skills {
-  padding-top: 7rem;
+  padding-top: 8rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
@@ -100,7 +100,9 @@ section.english {
   grid-row: 2 / 3;
 }
 .code-example ul {
- display: inline;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
  list-style: none;
  margin-block-start: 0px;
  padding-inline-start: 0px;
@@ -112,7 +114,7 @@ section.english {
   color: black;
 }
 .code-example img {
-  width: 100px;
+  width: 140px;
   height: 70px;
   object-fit: cover;
   transition: all 0.3s linear;
@@ -130,11 +132,14 @@ img.main-photo {
   transition: all 0.3s linear;
 }
 img.main-photo:hover {
-transform: scale(1.1);
+transform: scale(1.1) translateY(-20px);
 }
 .js {
   font-size: .5em;
   width: 100%;
+  filter:hue-rotate(200deg) ;
+  padding: 0;
+  margin: 0;
 }
 
 /*footer style start*/
