@@ -115,8 +115,11 @@ section.english {
   width: 100px;
   height: 70px;
   object-fit: cover;
+  transition: all 0.3s linear;
 }
-
+.code-example img:hover {
+  transform: scale(1.2);
+}
 img.main-photo {
   position: absolute;
   top: 7rem;
@@ -124,6 +127,10 @@ img.main-photo {
   height: 200px;
   border-radius: 50%;
   box-shadow: 0 0 0 1em white;
+  transition: all 0.3s linear;
+}
+img.main-photo:hover {
+transform: scale(1.1);
 }
 
 /*footer style start*/
@@ -144,7 +151,7 @@ footer > a {
   text-decoration: none;
   align-self: flex-end;
   color: var(--light-pink);
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1;
 }
 .github-container {
@@ -159,7 +166,7 @@ footer > a {
   background-image: url(https://image.flaticon.com/icons/png/512/536/536452.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: left; 
+  background-position: left;
 }
 
 @media(max-width: 700px) {
