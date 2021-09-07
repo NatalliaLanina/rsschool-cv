@@ -33,8 +33,7 @@ body * + *{
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  width: 60vw;
-  max-width: 1100px;
+  max-width: 60vw;
   min-width: 700px;
   min-height: 1200px;
   margin: 0 auto;
@@ -47,7 +46,7 @@ header {
   flex-direction: row;
   color: white;
   background-color: var(--dark-blue);
-  height: 170px;
+  height: 10em;
 }
 header > h1 {
   font-size: 2.8rem;
@@ -67,12 +66,13 @@ header > h1 {
   margin: 0;
 }
 
+
 /*main styles start*/
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 1em;
+  grid-gap: .8em;
 }
 main > * {
   background-color: var(--light-pink);
@@ -140,7 +140,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2rem;
-  height: 170px;
+  height: 10em;
   background-color: var(--dark-blue);
 }
 img.logo {
@@ -162,15 +162,25 @@ footer > a {
 .github {
   text-decoration: none;
   color: white;
-  padding-left: 40px;
+  padding-left: 2rem;
   background-image: url(https://image.flaticon.com/icons/png/512/536/536452.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
 }
 
+/* media request */
 @media(max-width: 700px) {
   img.main-photo {
     display: none;
+  }
+  main > section {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  .contact {
+    padding: 1rem;
+    margin-left: auto;
+    font-size: 1rem;
   }
 }
