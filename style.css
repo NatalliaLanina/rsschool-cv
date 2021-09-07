@@ -132,6 +132,10 @@ img.main-photo {
 img.main-photo:hover {
 transform: scale(1.1);
 }
+.js {
+  font-size: .5em;
+  width: 100%;
+}
 
 /*footer style start*/
 footer {

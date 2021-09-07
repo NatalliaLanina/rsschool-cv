@@ -5,6 +5,9 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>CV Natallia Lanina</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
     <div class="container">
@@ -51,6 +54,18 @@
               <li><a href="https://rolling-scopes-school.github.io/natallialanina-JSFEPRESCHOOL/js-clock/" target="blanc"><img src="js-clock.jpg" alt="js-clock"></a></li>
               <li><a href="https://rolling-scopes-school.github.io/natallialanina-JSFEPRESCHOOL/custom-video-player/" target="blanc"><img src="custom-video-player.jpg" alt="custom-video-player"></a></li>
             </ul>
+            <pre>
+              <code class="js">
+                function maskify(cc) {
+                  if (cc.length <= 3) {
+                    return cc;
+                  }
+                  let num = cc.slice(-4);
+                  let result = num.padStart(cc.length, '#');
+                  return result;
+                }
+              </code>
+            </pre>
           </div>
         </section>
         <section class="english">
