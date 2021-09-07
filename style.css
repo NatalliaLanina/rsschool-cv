@@ -116,6 +116,8 @@ section.english {
 .code-example img {
   width: 140px;
   height: 70px;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 5px 1px var(--dark-gray);
   object-fit: cover;
   transition: all 0.3s linear;
 }
@@ -137,10 +139,15 @@ transform: scale(1.1) translateY(-20px);
 .js {
   font-size: .5em;
   width: 100%;
-  filter:hue-rotate(200deg) ;
+  filter: invert(90%) hue-rotate(30deg);
   padding: 0;
   margin: 0;
+  transition: all 0.3s linear;
 }
+.js:hover {
+  transform: scale(1.1);
+}
+
 
 /*footer style start*/
 footer {
