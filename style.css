@@ -82,6 +82,7 @@ header > h1 {
   text-decoration: none;
   padding: .5rem;
   border-radius: .3em;
+  font-size: .8rem;
   font-weight: 600;
   background-color: var(--light-gray);
   box-shadow: 0 0 3px 1px var(--gray);
@@ -107,11 +108,17 @@ main > * {
 }
 main > section {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 section.education {
   padding-top: 8rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
+.education ul {
+  margin-bottom: 2rem;
 }
 section.soft-skills {
   padding-top: 8rem;
@@ -164,30 +171,38 @@ img.main-photo:hover {
 transform: scale(1.1) translateY(-20px);
 }
 .js {
+  margin: 0;
   font-size: .5em;
   width: 100%;
-  filter: invert(90%) hue-rotate(30deg);
-  padding: 0;
-  margin: 0;
   transition: all 0.3s linear;
 }
 .js:hover {
   transform: scale(1.1);
 }
-pre {
-  max-height: 8em;
-}
 .education img {
   object-fit: contain;
+  width: 100%;
+  margin-bottom: .5rem;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 5px 1px var(--dark-gray);
+}
+.video {
+  min-height: 15rem;
   width: 100%;
   margin-top: 1rem;
   border: 2px solid var(--white);
   box-shadow: 0 0 5px 1px var(--dark-gray);
 }
-.video {
-  min-height: 19rem;
+.english img {
+  object-fit: contain;
   width: 100%;
-  margin-top: 1rem;
+  margin-bottom: 2.8em;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 5px 1px var(--dark-gray);
+  transition: all 0.3s linear;
+}
+.english img:hover {
+  transform: scale(2);
 }
 
 /*footer style start*/
@@ -208,12 +223,12 @@ footer > a {
   text-decoration: none;
   align-self: flex-end;
   color: var(--light-pink);
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 .github-container {
   align-self: flex-end;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
  }
 .github {
@@ -225,6 +240,7 @@ footer > a {
   background-size: contain;
   background-position: left;
 }
+
 
 /* media request */
 @media(max-width: 700px) {
