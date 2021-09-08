@@ -40,6 +40,7 @@
             <li>Rs school: JS/FE Pre-School</li>
             <li>Rs school: JavaScript/Front-end 2021Q3 (in progress)</li>
           </ul>
+          <img src="certificate.jpg" alt="certificate">
         </section>
         <section class="soft-skills" id="soft-skills">
           <h3>Soft skills:</h3>
@@ -50,6 +51,8 @@
             <li>Active listening</li>
             <li>Flexibility</li>
           </ul>
+          <h3>Self introduction:</h3>
+          <iframe src="" frameborder="2" class="video"></iframe>
         </section>
         <section class="hard-skills" id="hard-skills">
           <h3>Hard skills:</h3>
@@ -75,6 +78,15 @@
                   }
                   let num = cc.slice(-4);
                   let result = num.padStart(cc.length, '#');
+                  return result;
+                }
+              </code>
+            </pre>
+            <pre>
+              <code class="js">
+                function convertHashToArray(hash){
+                  let arr = Object.entries(hash);
+                  let result = arr.sort();
                   return result;
                 }
               </code>

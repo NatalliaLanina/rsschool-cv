@@ -92,6 +92,8 @@ header > h1 {
   color: white;
 }
 
+
+
 /*main styles start*/
 main {
   display: grid;
@@ -155,7 +157,7 @@ img.main-photo {
   left: calc(50% - 100px);
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0 0 0 1em white;
+  box-shadow: 0 0 0 .8em white;
   transition: all 0.3s linear;
 }
 img.main-photo:hover {
@@ -172,7 +174,21 @@ transform: scale(1.1) translateY(-20px);
 .js:hover {
   transform: scale(1.1);
 }
-
+pre {
+  max-height: 8em;
+}
+.education img {
+  object-fit: contain;
+  width: 100%;
+  margin-top: 1rem;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 5px 1px var(--dark-gray);
+}
+.video {
+  min-height: 19rem;
+  width: 100%;
+  margin-top: 1rem;
+}
 
 /*footer style start*/
 footer {
