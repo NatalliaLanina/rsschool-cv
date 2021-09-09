@@ -170,7 +170,7 @@ img.main-photo {
 img.main-photo:hover {
 transform: scale(1.1) translateY(-20px);
 }
-.js {
+pre code.js {
   margin: 0;
   font-size: .5em;
   width: 100%;
