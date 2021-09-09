@@ -34,8 +34,7 @@ body * + *{
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  max-width: 60vw;
-  min-width: 700px;
+  max-width: 65vw;
   margin: 0 auto;
   background-color: white;
 }
@@ -44,23 +43,22 @@ body * + *{
 header {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   color: white;
   background-color: var(--dark-blue);
-  height: 10em;
 }
 header > h1 {
   font-size: 2.8rem;
-  padding-left: 2rem;
-  padding-top: 1.5rem;
-  margin: 9px;
+  padding: 2rem;
   line-height: 1;
   letter-spacing: 3px;
 }
 .contact {
   align-self: center;  
-  padding: 1.5rem;
-  margin-left: auto;
+  padding: 1rem;
   font-size: .8rem;
+  margin-bottom: 1.2rem;
 }
 .contact > h3 {
   margin: 0;
@@ -69,22 +67,25 @@ header > h1 {
   background-color: var(--light-pink);
 }
 .nav-container ul{
-  width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding-inline-start: 0;
+  margin-block-start: .3rem;
+  margin-block-end: .3rem;
 }
 .nav-list li {
   display: inline;
+  margin: .5rem .2rem;
 }
 .nav-list li a {
   color: var(--dark-blue);
   text-decoration: none;
   padding: .5rem;
-  border-radius: .3em;
+  border-radius: .2em;
   font-size: .8rem;
   font-weight: 600;
-  background-color: var(--light-gray);
+  background-color: var(--white);
   box-shadow: 0 0 3px 1px var(--gray);
   transition: all 0.4s linear;
 } 
@@ -92,7 +93,20 @@ header > h1 {
   background-color: var(--dark-blue);
   color: white;
 }
-
+img.main-photo {
+  position: absolute;
+  top: 9rem;
+  left: calc(50% - 100px);
+  height: 200px;
+  padding: 15px;
+  background-color: var(--light-pink);
+  border-radius: 50%;
+  box-shadow: 0 0 0 .8em white;
+  transition: all 0.3s linear;
+}
+img.main-photo:hover {
+transform: scale(1.1) translateY(-20px);
+}
 
 
 /*main styles start*/
@@ -111,9 +125,10 @@ main > section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 section.education {
-  padding-top: 8rem;
+  padding-top: 7rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
@@ -121,7 +136,7 @@ section.education {
   margin-bottom: 2rem;
 }
 section.soft-skills {
-  padding-top: 8rem;
+  padding-top: 7rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
@@ -148,8 +163,8 @@ section.english {
   color: black;
 }
 .code-example img {
-  width: 140px;
-  height: 70px;
+  width: 7rem;
+  height: 4rem;
   border: 2px solid var(--white);
   box-shadow: 0 0 5px 1px var(--dark-gray);
   object-fit: cover;
@@ -158,29 +173,18 @@ section.english {
 .code-example img:hover {
   transform: scale(1.2);
 }
-img.main-photo {
-  position: absolute;
-  top: 10.5rem;
-  left: calc(50% - 100px);
-  height: 200px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 .8em white;
-  transition: all 0.3s linear;
-}
-img.main-photo:hover {
-transform: scale(1.1) translateY(-20px);
-}
 pre code.js {
   margin: 0;
   font-size: .5em;
-  width: 100%;
   transition: all 0.3s linear;
 }
 .js:hover {
   transform: scale(1.1);
 }
 .education img {
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
+  max-height: 15rem;
   width: 100%;
   margin-bottom: .5rem;
   border: 2px solid var(--white);
@@ -196,13 +200,14 @@ pre code.js {
 .english img {
   object-fit: contain;
   width: 100%;
-  margin-bottom: 2.8em;
+  margin-top: 1rem;
+  margin-bottom: 2.8rem;
   border: 2px solid var(--white);
   box-shadow: 0 0 5px 1px var(--dark-gray);
   transition: all 0.3s linear;
 }
 .english img:hover {
-  transform: scale(2);
+  transform: scale(1.5) translateX(-5rem) translateY(-2rem);
 }
 
 /*footer style start*/
@@ -212,7 +217,6 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2rem;
-  height: 10em;
   background-color: var(--dark-blue);
 }
 img.logo {
@@ -230,6 +234,7 @@ footer > a {
   align-self: flex-end;
   font-size: 1rem;
   color: white;
+  margin-top: .5rem;
  }
 .github {
   text-decoration: none;
@@ -243,17 +248,38 @@ footer > a {
 
 
 /* media request */
-@media(max-width: 700px) {
-  img.main-photo {
-    display: none;
+@media(max-width: 1024px) {
+  .container {
+    max-width: 100vw;
   }
-  main > section {
-    padding: 2rem;
-    font-size: 1rem;
+  section.education, section.soft-skills {
+    padding-top: 1rem;
+  }
+  header > h1 {
+    font-size: 2.3rem;
+    padding: 1rem;
+    letter-spacing: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
   .contact {
+    padding: 0 1rem 1rem;
+  }
+  img.main-photo {
+    height: 100px;
+    padding: 0;
+    position: static;
+    margin: 1rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main > section {
     padding: 1rem;
-    margin-left: auto;
+  }
+  .contact {
+    margin: 0;
     font-size: 1rem;
   }
 }
