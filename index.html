@@ -11,15 +11,20 @@
    </head>
   <body>
     <div class="container">
-      <nav class="nav-container">
-        <ul class="nav-list">
-          <li><a href="#education">Education</a></li>
-          <li><a href="#soft-skills">Soft-skills</a></li>
-          <li><a href="#hard-skills">Hard-skills</a></li>
-          <li><a href="#english">English level</a></li>
-          <li><a href="#github">Github link</a></li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <div class="nav-icon">
+          <span></span>
+        </div>
+        <div class="nav-body">
+          <ul class="nav-list">
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#soft-skills" class="nav-link">Soft-skills</a></li>
+            <li><a href="#hard-skills" class="nav-link">Hard-skills</a></li>
+            <li><a href="#english" class="nav-link">English level</a></li>
+            <li><a href="#github" class="nav-link">Github link</a></li>
+          </ul>
+        </div>
+      </div>
       <header>
         <img src="photo300.jpg" class="main-photo" alt="my photo">
         <h1>Natallia <br> Lanina</h1>
@@ -57,7 +62,9 @@
           </div>
           <div>
             <h4>Self introduction:</h4>
-            <iframe src="https://youtu.be/NNlEKrpeByM" frameborder="2" class="video" sandbox="allow-scripts"></iframe>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/yJcCKuxfb2o" class="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </section>
         <section class="hard-skills" id="hard-skills">
@@ -81,7 +88,7 @@
             <pre>
               <code class="js">
                 function maskify(cc) {
-                  if (cc.length <= 3) {
+                  if (cc.length &lt;= 3) {
                     return cc;
                   }
                   let num = cc.slice(-4);
