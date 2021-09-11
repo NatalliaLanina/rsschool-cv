@@ -296,7 +296,7 @@ footer > a {
   }
 }
 /* --------------------- */
-@media(max-width: 767px) {
+@media(max-width: 768px) {
   .nav-container {
     min-height: 40px;
   }
