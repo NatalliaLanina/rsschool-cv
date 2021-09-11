@@ -5,10 +5,29 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>CV Natallia Lanina</title>
     <link href="style.css" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="monokai-sublime.min.css">
+    <script src="highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+   </head>
   <body>
     <div class="container">
+      <div class="nav-container">
+        <div class="nav-icon">
+          <span></span>
+        </div>
+        <div class="nav-body">
+          <ul class="nav-list">
+            <li><a data-goto=".education" href="#education" class="nav-link">Education</a></li>
+            <li><a data-goto=".soft-skills" href="#soft-skills" class="nav-link">Soft-skills</a></li>
+            <li><a data-goto=".hard-skills" href="#hard-skills" class="nav-link">Hard-skills</a></li>
+            <li><a data-goto=".english" href="#english" class="nav-link">English level</a></li>
+            <li><a data-goto="github" href="#github" class="nav-link">Github link</a></li>
+            <li><a data-goto=".certificate" href="https://app.rs.school/certificate/n9u8gcc8" class="nav-link" target="blanc">Certificate</a></li>
+           </ul>
+        </div>
+      </div>
       <header>
+        <img src="assets/photo300.jpg" class="main-photo" alt="my photo">
         <h1>Natallia <br> Lanina</h1>
         <div class="contact">
           <h3>Contact information:</h3>
@@ -19,49 +38,101 @@
         </div>
       </header>
       <main>
-        <img src="photo300.jpg" class="main-photo" alt="my photo">
-        <section class="education">
-          <h3>Education:</h3>
-          <ul>
-            <li>Belarusian National Technical University (architecture) 2004-2009</li>
-            <li>Gymnasium No. 32 of Minsk</li>
-          </ul>
+        <section class="education" id="education">
+          <div>
+            <h3>Education:</h3>
+            <ul>
+              <li>Belarusian National Technical University (architecture) 2004-2009</li>
+              <li>Gymnasium No. 32 of Minsk</li>
+              <li>Rs school: JS/FE Pre-School</li>
+              <li>Rs school: JavaScript/Front-end 2021Q3 (in progress)</li>
+            </ul>
+          </div>
+          <img src="assets/certificate.jpg" alt="certificate">
         </section>
-        <section class="soft-skills">
-          <h3>Soft skills:</h3>
-          <ul>
-            <li>Effective communication</li>
-            <li>Problem-solving</li>
-            <li>Teamwork</li>
-            <li>Active listening</li>
-            <li>Flexibility</li>
-          </ul>
+        <section class="soft-skills" id="soft-skills">
+          <div>
+            <h3>Soft skills:</h3>
+            <ul>
+              <li>Effective communication</li>
+              <li>Problem-solving</li>
+              <li>Teamwork</li>
+              <li>Active listening</li>
+              <li>Flexibility</li>
+              <li>Politeness</li>
+              <li>Friendliness</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Self introduction:</h4>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/U7c3v_8jKaU" class="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
         </section>
-        <section class="hard-skills">
-          <h3>Hard skills:</h3>
-          <ul>
-            <li>HTML (self-education)</li>
-            <li>CSS (self-education)</li>
-            <li>Figma (self-education)</li>
-          </ul>
+        <section class="hard-skills" id="hard-skills">
+          <div>
+            <h3>Hard skills:</h3>
+            <ul>
+              <li>HTML (self-education)</li>
+              <li>CSS (self-education)</li>
+              <li>Figma (self-education)</li>
+              <li>JavaScript (in progress)</li>
+            </ul>
+          </div>
+          <div class="code-example">
+            <h4>Code and project examples:</h4>
+            <ul>
+              <li><a href="https://rolling-scopes-school.github.io/natallialanina-JSFEPRESCHOOL/museum/" target="blanc"><img src="assets/museum.jpg" alt="museum"></a></li>
+              <li><a href="https://rolling-scopes-school.github.io/natallialanina-JSFEPRESCHOOL/js-clock/" target="blanc"><img src="assets/js-clock.jpg" alt="js-clock"></a></li>
+              <li><a href="https://rolling-scopes-school.github.io/natallialanina-JSFEPRESCHOOL/custom-video-player/" target="blanc"><img src="assets/custom-video-player.jpg" alt="custom-video-player"></a></li>
+              <li><a href="https://natallialanina.github.io/rsschool-cv/" target="blanc"><img src="assets/cv.jpg" alt="cv"></a></li>
+            </ul>
+            <pre>
+              <code class="js">
+                function maskify(cc) {
+                  if (cc.length &lt;= 3) {
+                    return cc;
+                  }
+                  let num = cc.slice(-4);
+                  let result = num.padStart(cc.length, '#');
+                  return result;
+                }
+
+                function convertHashToArray(hash){
+                  let arr = Object.entries(hash);
+                  let result = arr.sort();
+                  return result;
+                }
+              </code>
+            </pre>
+           </div>
         </section>
-        <section class="english">
-          <h3>English language level:</h3>
-          <ul>
-            <li>Pre-Intermediate
-              <ul>
-                <li>Grammar - Intermediate</li>
-                <li>Understanding of spoken language - Intermediate</li>
-                <li>Spoken language - Elementary</li>
-              </ul>
-            <li>Practice: watching movies and podcasts in original without subtitles
-          </ul>
+        <section class="english" id="english">
+          <div>
+            <h3>English language level:</h3>
+            <ul>
+              <li>Pre-Intermediate
+                <ol>
+                  <li>Grammar - Intermediate</li>
+                  <li>Understanding of spoken language - Intermediate</li>
+                  <li>Spoken language - Elementary</li>
+                </ol>
+              <li>Practice: watching movies and podcasts in original without subtitles
+            </ul>
+          </div>
+          <img src="assets/english.jpg" alt="english">
         </section>
       </main>
       <footer>
         <img src="https://rs.school/images/rs_school_js.svg" class="logo" alt="rsschool logo">
+        <div class="github-container" id="github">
+          <a class="github" href="https://github.com/NatalliaLanina">Natallia Lanina</a>
+          <time>2021</time>
+        </div>
         <a href="https://rs.school/js/">Rsschool</a>
       </footer> 
-    </div>     
+    </div>
+    <script src="script.js"></script>     
   </body>
 </html>
